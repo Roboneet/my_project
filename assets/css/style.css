@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+body{
+	background-color: #005688;
+	font: 18px/28px "Lato",arial,verdana;
+	font-weight: 300;
+	color: #dddddd;
+}
+
+
+.container{
+	width: 400px;
+	margin: 0 auto;
+	
+}
+
+@media only screen and (min-width: 600px){
+	.container{
+		width: 600px;
+		margin: 0 auto;
+		
+	}
+}
+
+@media only screen and (min-width: 950px){
+	.container{
+		width: 950px;
+		margin: 0 auto;
+		
+	}
+}
+
+/***
+
+
+====================
+clear-fix
+
+===================
+
+***/
+
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after
+{
+  clear: both;
+}
+.group {
+  *zoom: 1;
+}
+
+
+
+
+/***
+
+Typography
+
+****/
+
+h1{
+	font-size: 50px;
+	line-height: 60px;
+}
+
+h2{
+	font-size: 24px;
+	line-height: 34px;
+}
+
+h3{
+	font-size: 20px;
+	line-height: 30px;
+}
+
+/***
+
+======================
+
+header
+
+======================
+
+
+***/
+
+header{
+	/***box-shadow: inset 0 -2px 2px #000000;***/
+	background:rgba(0,0,0,0.5);
+}
+
+
+.title{
+	padding: 6px;
+	display: inline-block;
+	letter-spacing: 0.1em;
+	font-weight: 700;
+}
+
+
+
+/***
+
+====================
+
+nav bar
+
+====================
+
+
+
+***/
+
+
+nav{
+	max-height:0;
+	display:none;
+	transition: all 1s linear;
+	
+}
+
+#toogle{
+	display:none;
+}
+
+
+
+.menu input:checked ~ nav{
+	display: block;
+	max-height: 500px;
+}
+
+.primary-nav li{
+	border-bottom: 1px solid #cccccc;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+
+.primary-nav li:nth-child(2n){
+	background-color: rgba(00,0,0,0.3) ;
+}
+
+.primary-nav li:last-child{
+	border-width: 0;
+}
+
+.primary-nav a{
+	text-decoration: none;
+	color: #dddddd;
+}
+.primary-nav li:last-child{
+	margin-bottom: 0px;
+}
+
+@media only screen and (min-width: 600px){
+	nav{
+		display: block;
+		float: right;
+	}
+	.primary-nav li{
+		display: inline-block;
+		position: relative;
+		top: -42px;
+		font-weight: 100;
+	}
+	label{
+		display: none;
+	}
+	.primary-nav li{
+	border-bottom-width:0px;
+	padding: 6px;
+	}
+	.primary-nav li:nth-child(2n){
+		background-color: rgba(0,56,88,0)
+	}
+
+}
+
+/***
+
+===================
+
+hero section
+
+===================
+
+***/
+
+
+.hero{
+	padding-top: 70px;
+	text-align: center;
+	height: 70vh;
+	color: #fff;
+	
+}
+.heading{
+	margin: 10px 30px;
+	font-size: 24px;
+}
+.tagline{
+	padding: 20px;
+	font-size:22px;
+	line-height: 30px;
+	display:none;
+}
+h2{
+	display: none;
+	animation-delay: 0.1s;
+}
+
+@media only screen and (min-width: 600px){
+
+	.heading{
+		margin: 100px 30px 100px 30px;
+		font-size: 40px;
+
+	}
+	.tagline{
+		padding: 20px;
+		font-size: 32px;
+	}
+}
+
+/***
+
+====================
+
+login
+
+=====================
+
+***/
+.login{
+	background: #005688;
+	animation-delay: .5s;
+	background:rgba(0,0,0,0.5);
+	border: 1px solid rgba(00,0,0,0.5);
+	/***box-shadow: inset 0 2px 0 #000000;***/
+
+	
+	
+}
+
+
+
+
+.login .container{
+	width: 100px;
+	margin: 0 auto;
+
+
+}
+.login a{
+	text-decoration: none;
+	color: #212121;
+	font-size: 22px;
+	line-height: 50px;
+}
+.login-button{
+	
+	background-color: #fff;
+	opacity: 1;
+	text-align: center;
+	width: 100px;
+	margin: 50px auto;
+	border-radius: 6px;
+	border: 1px solid #eee;
+	background-color: #fff;
+	color: #212121;
+	height: 50px;
+	cursor: pointer;
+	box-shadow: 0 5px 0 #aaaaaa;
+	
+}
+.login-button:active{
+	transform: translateY(3px);
+	box-shadow: 0 5px 0 #aaaaaa;
+}
+/***
+@media only screen and (min-width: 600px){
+	.login{
+		height: 150px;
+	}
+}
+***/
+
+.parallax{
+   
+
+    background-image: url("../images/img2.jpg");
+
+    
+    min-height: 500px; 
+
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#sheild{
+	display: none;
+}
+
+.backdrop{
+	position:fixed;
+	top: 0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color: rgba(0,0,0,0.5);
+	
+}
+
+.canvas{
+	position: relative;
+	top: 20vh;
+	bottom: 20vh;
+	background-color: #fff;
+	width: 250px;
+	border-radius: 6px;
+	margin-left: 10%;
+	text-align: center;
+	overflow: auto;
+	color: #113688;
+	width: 350px;
+	margin: 0 auto;
+
+}
+
+.canvas header{
+	padding: 20px;
+	font-size: 24px;
+	text-align: center;
+	box-shadow: 0 2px 1px #dddddd;
+	background-color: #eee;
+	font-size: .8em
+}
+
+form{
+	margin: 0 auto;
+	width: 200px;
+
+}
+
+.account-info{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.account-info label{
+	margin-top: 40px;
+	text-align: left;
+	display:block;
+	height: 30px;
+	font-size:0.8em;
+}
+
+.account-info input{
+	width: 100%;
+	border-radius: 6px;
+	box-shadow: inset 0 1px #dddddd;
+	font-size: 24px;
+	display: block;
+
+}
+.account-action .btn{
+	margin-top: 20px;
+	height: 50px;
+	width: 70px;
+	font-size: 20px;
+	font-size:0.8em;
+	color: #fff;
+	border-width: 0;
+	background-color : rgb(0,79,210);
+	box-shadow: 0 5px 0 0 rgb(0,0,160);
+	border-radius: 6px;
+}
+
+.btn:active{
+	transform: translateY(3px);
+	box-shadow: 0 2px 0 0 rgb(0,0,160);
+}
+.account-action label{
+	padding-top: 20px;
+	font-size: 0.8em;
+}
+
+
+.canvas footer{
+	margin-top: 30px;
+	font-size: 16px;
+}
+.canvas footer a{
+	cursor:pointer;
+}
+
+.canvas footer a:active{
+	color: #009688;
+}
+
+.account-action label{
+	display:block;
+	margin-bottom: 10px;
+	line-height: 50px;
+}
+
+.canvas .close{
+	position: absolute;
+	right: 10px;
+	top:10px;
+	
+	cursor: pointer;
+}
+
+.canvas .close a{
+color : #aaaaaa;
+text-decoration: none;
+
+
+}
+
+@media only screen and (min-width:950px){
+	.canvas{
+		width: 400px;
+		margin : 0 auto;
+		font-size: 1.25em;
+
+	}
+}
+
+
+

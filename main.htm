@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta chrset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<title>ACM</title>
+	<link rel="icon" href="assets/images/favicon.png">
+	<link rel="stylesheet" href="assets/css/resets.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/lato-fonts.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script type="javascript" src="assets/js/script.js"></script>
+
+</head>
+<body class="parallax">
+	<header class="animated slideInDown">
+		<div class="container group">
+		<label for="toogle">&#9776</label>
+		<h3 class="title ">ACM</h3>
+		<div class="menu ">
+		<input id="toogle" type="checkbox">
+		
+		<nav class="primary-nav ">
+			<ul>
+				<li ><a href="#">Home</a></li>
+				<li>About</li>
+				<li><a  href="javascript:void(0)" onclick="document.getElementById('sheild').style.display='block'">Login</a></li>
+				<li >Sign Up</li>
+
+			</ul>
+		</nav>
+		</div>
+
+		
+
+		</div>
+	</header>
+	<section class="group">
+		<div class="container">	
+		 <section class="hero">
+			<div class="heading animated slideInUp">
+				<h1>Association of Computing and Machinery</h1>
+			</div>
+			<div>
+				<ul>
+					<li><h2 class="tagline animated fadeInUp">Advancing Computing as a Science and a Profession</h2></li>
+					<li><h2 class="tagline animated fadeInUp">Let's evolve</h2></li>
+					<li><h2 class="tagline animated fadeInUp">Join Us</h2></li>
+				</ul>
+			</div>
+		 </div>
+
+		</section>
+
+
+
+	
+		<section class="login animated zoomIn">
+			<div class="container">
+				<div class="login-button">
+				<a  href="javascript:void(0)" onclick="document.getElementById('sheild').style.display='block'">Login</a>
+				</div>
+			</div>
+			
+
+
+		</section>
+	</section>
+
+	<section id="sheild" class="backdrop">
+		<section class="canvas" id="light">
+			<header>Login
+			<div class="close "><a href="javascript:void(0)" onclick="document.getElementById('sheild').style.display='none'">x</a></div>
+			</header>
+
+				<form>
+				  <fieldset class="account-info">
+				    <label>
+				      Username
+				      <input type="text" name="username">
+				    </label>
+				    <label>
+				      Password
+				      <input type="password" name="password">
+				    </label>
+				  </fieldset>
+				  <fieldset class="account-action">
+				    <input class="btn" type="submit" name="submit" value="Login">
+				    <label>
+				      <input type="checkbox" name="remember">Stay Logged In
+				    </label>
+				  </fieldset>
+				</form>
+			
+			<footer><p>New here? <a>Sign Up</a></p></footer>
+		</section>
+	</section> 
+	<script>
+		
+			var lines = document.getElementsByTagName("h2");
+			var i = 2;
+			var n = 3;	
+			var changeText = setInterval(function(){
+				console.log(i);
+				console.log(lines[i].class);
+				lines[i].style.display="none";
+				if(i==(n-1)){
+					i=0;
+				}
+				else{
+					i++;
+				}
+				lines[i].style.display="block"
+			},2000);
+			
+	</script>
+</body>
+</html>
